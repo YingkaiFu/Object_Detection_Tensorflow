@@ -1,0 +1,9 @@
+[
+  "faster_rcnn_nas_feature_extractor_test.py::FasterRcnnNASFeatureExtractorTest::test_extract_box_classifier_features_returns_expected_size",
+  "faster_rcnn_nas_feature_extractor_test.py::FasterRcnnNASFeatureExtractorTest::test_extract_proposal_features_dies_on_invalid_stride",
+  "faster_rcnn_nas_feature_extractor_test.py::FasterRcnnNASFeatureExtractorTest::test_extract_proposal_features_dies_with_incorrect_rank_inputs",
+  "faster_rcnn_nas_feature_extractor_test.py::FasterRcnnNASFeatureExtractorTest::test_extract_proposal_features_input_size_112",
+  "faster_rcnn_nas_feature_extractor_test.py::FasterRcnnNASFeatureExtractorTest::test_extract_proposal_features_input_size_224",
+  "faster_rcnn_nas_feature_extractor_test.py::FasterRcnnNASFeatureExtractorTest::test_extract_proposal_features_returns_expected_size",
+  "faster_rcnn_nas_feature_extractor_test.py::FasterRcnnNASFeatureExtractorTest::test_session"
+]

@@ -1,0 +1,6 @@
+[
+  "create_coco_tf_record_test.py::CreateCocoTFRecordTest::test_create_sharded_tf_record",
+  "create_coco_tf_record_test.py::CreateCocoTFRecordTest::test_create_tf_example",
+  "create_coco_tf_record_test.py::CreateCocoTFRecordTest::test_create_tf_example_with_instance_masks",
+  "create_coco_tf_record_test.py::CreateCocoTFRecordTest::test_session"
+]

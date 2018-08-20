@@ -1,0 +1,4 @@
+{
+  "create_coco_tf_record_test.py::CreateCocoTFRecordTest::test_create_tf_example": true,
+  "create_coco_tf_record_test.py::CreateCocoTFRecordTest::test_create_tf_example_with_instance_masks": true
+}
