@@ -1,13 +1,7 @@
 import numpy as np
 import os
-import pyrealsense2 as rs
-import six.moves.urllib as urllib
 import sys
-import tarfile
 import tensorflow as tf
-import zipfile
-import math
-import corner
 
 from PIL import Image
 import cv2
@@ -289,7 +283,7 @@ def main(itemId=[], positionx=[], positiony=[], Theta=[]):
     #     t = t + 1
     #
     # pipeline.stop()
-    depth_colormap = cv2.imread('d.jpg')
+    depth_colormap = cv2.imread('image/d.jpg')
     # Path to frozen detection graph. This is the actual model that is used for the object detection.
     # PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
     PATH_TO_CKPT = '/home/yingkai/Documents/Models/Object_detection_Competition/frozen_inference_graph.pb'
