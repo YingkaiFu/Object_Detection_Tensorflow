@@ -87,6 +87,6 @@ After some time, a file named `frozen_inference_graph.pb` will appear in your
 output directory.
 ### Run your model!
 Modify the path in detect.py to your own path, use your own model and
-try the object detection create by your own.
+then try the object detection by running main.py
 ### Domo to lauch
 Run main.py in this project
