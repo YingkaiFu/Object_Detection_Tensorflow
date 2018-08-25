@@ -53,6 +53,40 @@ inference, it also consumes large GPU memory, in the contrast, `SSD`
 is easy to train and the model can also be deployed on mobile phones.
 In my project, I use Faster-r-cnn resnet51 as the pre-trained model.
 ### Modify configurations
-
+After choose a model, we have to add a file to let tensorflow know how
+to train and test the model. We can choose and modify the
+configuration file in object_detection/samples/configs. You should
+modify the class number and relevant train and eval path together
+with the fine_tune_checkpoint.
+```
+    num_classes: 90
+    
+    ...
+    fine_tune_checkpoint: "/home/yingkai/faster_rcnn_nas_coco_2018_01_28/model.ckpt"
+    
+    ...
+    input_path: "PATH_TO_BE_CONFIGURED/mscoco_train.record-?????-of-00100"
+    label_map_path: "/home/yingkai/Project/PycharmProjects/Tensorflow/object_detection/training/label.pbtxt"
+    
+```
+### Train your model
+Now everything is ready, run the following command to train the model,
+make sure the path is correct.
+```angular2html
+python object_detection/legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_pets.config
+```
+where `train_dir` is the output dir, `pipeline_config_path` is your configuration path.
+### Export the model
+To use the model without the configuration, we can export the model
+so it can run everywhere where tensorflow is installed, try the following
+command.
+```angular2html
+python object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --trained_checkpoint_prefix training/model.ckpt-XXXX --output_directory inference_graph
+```
+After some time, a file named `frozen_inference_graph.pb` will appear in your
+output directory.
+### Run your model!
+Modify the path in detect.py to your own path, use your own model and
+try the object detection create by your own.
 ### Domo to lauch
 Run main.py in this project
