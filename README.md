@@ -1,11 +1,12 @@
 ### Object detection for 20 items with tensorflow
 This project is based on tensorflow object detection API aimded
  to detect objects which place on the desk. The training items
- can be found in the file 'item_list.pdf', they can overrlapped
- with each others. Our model fine tunes from faster-r-cnn 
-  resnet-51, the training is done with two Tesla V100 GPU on
-  Tensorflow 1.8 
-    
+ can be found in the file `item_list.pdf`, they can overrlapped
+ with each others. Our model finetunes from faster-r-cnn 
+ resnet-51, the training is done with two Tesla V100 GPU on
+ Tensorflow 1.8 
+ 
+![Demo](https://github.com/YingkaiFu/Object_Detection_Tensorflow/blob/master/detect_result.jpg)
 ### Packages
 * Tensorflow-GPU
 * opencv-python
