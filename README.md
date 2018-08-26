@@ -7,6 +7,11 @@ This project is based on tensorflow object detection API aimded
  Tensorflow 1.8 
  
 ![Demo](https://github.com/YingkaiFu/Object_Detection_Tensorflow/blob/master/detect_result.jpg)
+### Domo to lauch
+Download the model from [here](https://pan.baidu.com/s/1H6KovubBhVQMqz6P9FqVow)
+, move the model to the root folder of the project and then
+run main.py
+
 ### Packages
 * Tensorflow-GPU
 * opencv-python
@@ -89,7 +94,3 @@ output directory.
 ### Run your model!
 Modify the path in detect.py to your own path, use your own model and
 then try the object detection by running main.py
-### Domo to lauch
-Download the model from [here](https://pan.baidu.com/s/1H6KovubBhVQMqz6P9FqVow)
-, move the model to the root folder of the project and then
-run main.py
