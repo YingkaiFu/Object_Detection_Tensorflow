@@ -90,4 +90,6 @@ output directory.
 Modify the path in detect.py to your own path, use your own model and
 then try the object detection by running main.py
 ### Domo to lauch
-Run main.py in this project
+Download the model from [here](https://pan.baidu.com/s/1H6KovubBhVQMqz6P9FqVow)
+, move the model to the root folder of the project and then
+run main.py

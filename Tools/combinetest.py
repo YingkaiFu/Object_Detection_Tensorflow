@@ -1,9 +1,9 @@
 import argparse
 import glob
+import os
 
 import cv2
 import numpy as np
-import os
 
 
 def show_in_one(images, show_size=(300, 300), blank_size=2, window_name="merge"):

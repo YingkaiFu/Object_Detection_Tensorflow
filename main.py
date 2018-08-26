@@ -1,7 +1,6 @@
-from ui import Ui_QMainWindow
-from display import Display
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtGui, QtWidgets
 
+from ui import Ui_QMainWindow
 
 
 class MainDialog(QtWidgets.QDialog):
@@ -11,7 +10,7 @@ class MainDialog(QtWidgets.QDialog):
         QtWidgets.QDialog.__init__(self)
         self.ui = Ui_QMainWindow()
         self.ui.setupUi(self)
-        logo = QtGui.QImage("nculogo.jpg")
+        logo = QtGui.QImage("image/nculogo.jpg")
         logo = logo.scaled(200,200)
         self.ui.label.setPixmap(QtGui.QPixmap(logo))
         self.ui.label.resize(300,300)
@@ -24,39 +23,14 @@ class MainDialog(QtWidgets.QDialog):
 
 
     def PushButtonClicked2(self):
-        self.close()  # 关闭
-
-
-class SecondDialog(QtWidgets.QDialog):
-    def __init__(self):
-        QtWidgets.QDialog.__init__(self)
-        self.ui = Display()
-        self.ui.setupUi(self)
-
-    def show_dialog(self):
-        self.show()
-        itemId = []
-        positionx = []
-        positiony = []
-        Theta = []
         from detect import main
-        main(itemId, positionx,positiony, Theta)
-        strID = ' '.join(itemId)
-        strX = ' '.join(positionx)
-        strY = ' '.join(positiony)
-        strTheta = ' '.join(Theta)
-        self.ui.lineEdit.setText(strID)
-        self.ui.lineEdit_2.setText(strX)
-        self.ui.lineEdit_3.setText(strY)
-        self.ui.lineEdit_4.setText(strTheta)
-
+        main()
 
 
 import sys
 if __name__=='__main__':
     app=QtWidgets.QApplication(sys.argv)
     Form=MainDialog()
-    Form_1 = SecondDialog()
     Form.show()
-    Form.ui.pushButton.clicked.connect(Form_1.show_dialog)
+    Form.ui.pushButton.clicked.connect(Form.PushButtonClicked2)
     sys.exit(app.exec_())
